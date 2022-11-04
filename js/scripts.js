@@ -50,26 +50,25 @@ Pizza.prototype.addToppings = function (toppings) {
 
 
 
-
-
 // UI logic 
-
-   const form = document.getElementById('pizzaOrder');
-   form.addEventListener('submit', function() {
-   
-    document.querySelector('.btn-order').addEventListener("click", function() {
-
-   }
-  });
-   
-
-  
   function displayPizza(event) {
     event.preventDefault();
     const pizzaSize = document.querySelector("#choosePizzaSize").value;
     const pizzaToppings = document.querySelector("#chooseToppings").value;
-    let newPizza = new Pizza (pizzaSize, pizzaToppings);
-   
+    const newPizza = new Pizza (pizzaSize, pizzaToppings);
+    ("input:checkbox[name=toppings]:checked").each(function(){
+      let toppingsPicked = (this).value();
+      newPizza.addToppings(toppingsPicked);
+    });
+    
+  
+
+   const form = document.getElementById('pizzaOrder');
+   form.addEventListener('submit', function() {
+    document.querySelector('.btn-order').addEventListener("click", function() {
+   });
+   });
+
 
   }
 

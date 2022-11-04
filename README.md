@@ -37,12 +37,22 @@ Describe: Pizza()
 
 Test: "it should return a Pizza object with two prperties for topping, size, and cost.
 
-code: const myPizza = new pizza ("pineapple, artichokes"], "medium");
+code: const NewPizza = new pizza ("pineapple, sausage"], "large");
 
-expected Output: { toppings: [ "pineapple, Artichokes"], Size: "medium")
+expected Output: { toppings: [ "pineapple, sausage"], Size: "large")
 
-Test: Keep getting undefined value from the test (failed).
-test2: still not understanding why i keep getting undefined as a value.
+Test results: Keep getting undefined value from the test (failed).
+test 2 results: still not understanding why i keep getting undefined as a value.
+test 3 results: It succesfully gave me the  new Pizza ('large', ['Pineapple', 'Sausage']
+
+Describe: addToppings()
+
+Test: " it should return the cost of the pizza with added toppings."
+
+Code: newPizza.addToppings();
+
+expected Output: "should be the pizza with the added toppings cost added to the size of the pizza i got the size of the pizza cost but not the added toppings price."
+
 
 
 

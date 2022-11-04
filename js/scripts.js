@@ -2,64 +2,50 @@
 function Pizza(size, toppings, cost) {
   this.size = size;
   this.toppings =toppings;
-  this.cost = [8,10, 12, 1];
+  this.cost = 0;
 }
 
-Pizza.prototype.addToCost = function() {
-  if ( this.size === 'small') {
+Pizza.prototype.addToCost = function() { 
+  if (this.size === "small") {
     this.cost += 8;
-  } else if (this.size === 'medium'){
+  } else if (this.size === "medium"){
     this.cost = 10;
-  } else if (this.size === 'large'){
+  } else if (this.size === "large"){
     this.cost += 12;
-  }
+    }else (this.size === "familySize"){
+    this.cost += 14;
+    };
+  };
 
 
   Pizza.prototype.addToppings = function(toppings){
     this.toppings.push(toppings);
 
-if (this.toppings.includes('pepperoni')) {
+if (this.toppings.includes("pepperoni")) {
   this.cost += 1;
 };
-if(this.toppings.includes('Anchovies')) {
+if(this.toppings.includes("Anchovies")) {
 this.cost += 1;
 };
-if(this.toppings.includes('Pineapple')) {
+if(this.toppings.includes("Pineapple")) {
   this.cost += 1;
 };
-if(this.toppings.includes('Artichokes')) {
+if(this.toppings.includes("Artichokes")) {
 this.cost += 1;
 };
-if(this.toppings.includes('Sausage')) {
+if(this.toppings.includes("Sausage")) {
   this.cost += 1;
 };
-if(this.toppings.includes('Bell Peppers')){
+if(this.toppings.includes("Bell Peppers")){
   this.cost += 1;
-  console.log('this.cost');
-
-  return this.cost;
-};
-};  console.log('this.cost')
-}
-
-
-
-  // Pizza.prototype.addToppings = function(toppings){
-  //   this.toppings.push(toppings);
-  // }
-
-
-
-
-
-
-
-
-
-
+  
+   console.log(this.cost);
+};  
+} 
 
 // User Interface Logic
 
 
+// window.addEventListener("load", function () {
 
-
+//   document.querySelector(".orderTotoal").addEventListener("click", ());

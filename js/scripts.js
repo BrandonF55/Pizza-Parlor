@@ -2,11 +2,14 @@
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings =toppings;
-  this.cost = cost;
+  this.cost = 0;
 }
 
-Pizza.prototype.addToCost = function() { 
-  let cost = cost;
+const size = small
+
+
+Pizza.prototype.addToCost = function() {
+  this.cost = cost;
   if (this.size === "small") {
     this.cost += 8;
   } else if (this.size === "medium"){
@@ -14,6 +17,9 @@ Pizza.prototype.addToCost = function() {
   } else if (this.size === "large"){
     this.cost += 12;
 }
+
+Pizza.prototype.addToppings = function(toppings) {
+  this.toppings = toppings
 if (this.toppings.includes("pepperoni")) {
   this.cost += 1;
 };
@@ -34,18 +40,23 @@ if(this.toppings.includes("Bell Peppers")){
 };
   return this.cost;
 }
-
-
-Pizza.prototype.addTop = function(topping) {
-  this.toppings.push(topping);
 }
 
-
+console.log(toppings);
 // user interface logic
-// window.addEventListener('submit', function(){
-//   document.getElementById('.pizzaOrder');
-//   form.addEventListener()
-// });
+
+
+window.addEventListener('submit', function(event){
+  document.getElementById('.pizzaOrder');
+  event.preventDefault()
+
+document.querySelector('.btn-order').addEventListener("click", function() {
+  
+});
+
+});
+
+
 
 
 

@@ -1,0 +1,30 @@
+#pizzaOrder {
+font-size: larger;
+font-family: Georgia, 'Times New Roman', Times, serif;
+border-radius: 20px;
+text-align: center;
+}
+
+#btn-order{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: small;
+  border-radius: 20px;
+}
+
+h1{
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+h2{
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#thankYou{
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+

@@ -42,7 +42,7 @@ code: const myPizza = new pizza ("pineapple, artichokes"], "medium");
 expected Output: { toppings: [ "pineapple, Artichokes"], Size: "medium")
 
 Test: Keep getting undefined value from the test (failed).
-
+test2: still not understanding why i keep getting undefined as a value.
 
 
 

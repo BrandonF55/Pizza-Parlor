@@ -43,15 +43,9 @@ expected Output: { toppings: [ "pineapple, sausage"], Size: "large")
 
 Test results: Keep getting undefined value from the test (failed).
 test 2 results: still not understanding why i keep getting undefined as a value.
-test 3 results: It succesfully gave me the  new Pizza ('large', ['Pineapple', 'Sausage']
+test 3 results: It succesfully gave me the  new Pizza ('large', ['Pineapple', 'Sausage'] 
+test 4: succefully got the price of the large pizza, but didnt not get the price of the toppings included in the total price.
 
-Describe: addToppings()
-
-Test: " it should return the cost of the pizza with added toppings."
-
-Code: newPizza.addToppings();
-
-expected Output: "should be the pizza with the added toppings cost added to the size of the pizza i got the size of the pizza cost but not the added toppings price."
 
 
 

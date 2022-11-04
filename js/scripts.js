@@ -53,16 +53,22 @@ Pizza.prototype.addToppings = function (toppings) {
 
 
 // UI logic 
-   const form = document.getElementById('pizza-order');
-   form.addEventListener('submit', function(event) {
-    event.preventDefault()
 
+   const form = document.getElementById('pizzaOrder');
+   form.addEventListener('submit', function() {
+   
+    document.querySelector('.btn-order').addEventListener("click", function() {
+
+   }
   });
+   
+
+  
   function displayPizza(event) {
     event.preventDefault();
     const pizzaSize = document.querySelector("#choosePizzaSize").value;
     const pizzaToppings = document.querySelector("#chooseToppings").value;
-    let newPizza = new Pizza (pizzaSize, pizzaToppings)
+    let newPizza = new Pizza (pizzaSize, pizzaToppings);
    
 
   }

@@ -6,6 +6,7 @@ function Pizza(size, toppings) {
 }
 
 
+
 Pizza.prototype.addToCost = function() {
   let cost = this.cost;
   if (this.size === "small") {
@@ -49,65 +50,24 @@ Pizza.prototype.addToppings = function (toppings) {
 
 
 
-// UI
+
+
+// UI logic 
+   const form = document.getElementById('pizza-order');
+   form.addEventListener('submit', function(event) {
+    event.preventDefault()
+
+  });
+  function displayPizza(event) {
+    event.preventDefault();
+    const pizzaSize = document.querySelector("#choosePizzaSize").value;
+    const pizzaToppings = document.querySelector("#chooseToppings").value;
+    let newPizza = new Pizza (pizzaSize, pizzaToppings)
+   
+
+  }
 
 
 
 
 // console.log()
-let newPizza = new Pizza ('large', ['Pineapple','Sausage'])
-console.log(newPizza.addToppings());
-console.log(newPizza.addToCost());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// user interface logic
-
-
-// window.addEventListener('submit', function(event){
-//   document.getElementById('.pizzaOrder');
-//   event.preventDefault()
-
-// document.querySelector('.btn-order').addEventListener("click", function() {
-  
-// });
-
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// window.addEventListener('load', function (){
-//   const form = document.getElementById('pizzaOrder');
-//   form.addEventListener('submit', pizzaOrder);
-// });
-

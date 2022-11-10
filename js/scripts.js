@@ -3,76 +3,60 @@ function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
   this.cost = 0;
+  this.pizzaArray = [];
 }
 
 
 
 Pizza.prototype.addToCost = function() {
-  let cost = this.cost;
+  //let cost = this.cost;
   if (this.size === "small") {
-    cost += 8;
+    this.cost += 8;
   } else if (this.size === "medium"){
-    cost = 10;
+    this.cost = 10;
   } else if (this.size === "large"){
-    cost += 12;
+    this.cost += 12;
 }
-    return cost;
+    return this.cost;
 };
 
 
-Pizza.prototype.addToppings = function() {
-  let cost = this.cost
-if (this.toppings.includes("pepperoni")) {
-  cost += 1;
-};
-if(this.toppings.includes("Anchovies")) {
-cost += 1;
-};
-if(this.toppings.includes("Pineapple")) {
-  cost += 1;
-};
-if(this.toppings.includes("Artichokes")) {
-  cost += 1;
-};
-if(this.toppings.includes("Sausage")) {
-  cost += 1;
-};
-if(this.toppings.includes("Bell Peppers")){
-  cost += 1;
-}; 
-  return cost;
- 
-};
 
-Pizza.prototype.addToppings = function (toppings) {
-  this.toppings.push(toppings);
+
+Pizza.prototype.addToppings = function () {
+  this.cost.push += (this.toppings.length * 1);
+
+  return this.cost;
 };
 
 
 
 // UI logic 
-  function displayPizza(event) {
-    event.preventDefault();
-    const pizzaSize = document.querySelector("#choosePizzaSize").value;
-    const pizzaToppings = document.querySelector("#chooseToppings").value;
+  function displayPizza() {
+    const pizzaSize = document.querySelector('input[type=radio]:checked').value;
+    const pizzaToppings = document.querySelector('input[type=checkbox]:checked').value;
     const newPizza = new Pizza (pizzaSize, pizzaToppings);
-    ("input:checkbox[name=toppings]:checked").each(function(){
-      let toppingsPicked = (this).value();
-      newPizza.addToppings(toppingsPicked);
-    });
-    
+     
+    for (let i = 0; i< pizzaToppings.length; i++){
+      newPizza.pizzaArray.push(pizzaToppings[i].value)
+      
+    }
+
+    newPizza.addToCost();
+    document.querySelector("#tartget").innerHTML = newPizza.cost;
+      newPizza.addToppings();
+         console.log(newPizza)
+    }
+   
+  window.addEventListener("load", function() {
+  const form = document.getElementById('pizzaOrder');
+   form.addEventListener('submit', function(event) {
+     event.preventDefault();
+    document.querySelector('#btn-order').addEventListener("click", displayPizza());
+     
+   });
+   });
+
+
   
-
-   const form = document.getElementById('pizzaOrder');
-   form.addEventListener('submit', function() {
-    document.querySelector('.btn-order').addEventListener("click", function() {
-   });
-   });
-
-
-  }
-
-
-
-
-// console.log()
+   

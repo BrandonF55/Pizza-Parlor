@@ -48,6 +48,30 @@ test 4: succefully got the price of the large pizza, but didnt not get the price
 
 
 
+Describe: addToCost()
+
+test: "it should return the cost of the pizza you chose either small, medium, or large pizza"
+
+code: Pizza.prototype.addToCost = function() {
+  //let cost = this.cost;
+  if (this.size === "small") {
+    this.cost += 8;
+  } else if (this.size === "medium"){
+    this.cost = 10;
+  } else if (this.size === "large"){
+    this.cost += 12;
+}
+    return this.cost;
+
+    expected output: { small pizza = 8 }
+
+    Test 1 results: if you choose a small pizza it out puts the right price of 8.
+    test 2 results: if you choose a small pizza it out puts the right price of 10.
+    test 3 results: if you choose a small pizza it out puts the right price of 12. the function is working as expected.
+
+
+
+
 
 
 
